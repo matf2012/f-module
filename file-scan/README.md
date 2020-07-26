@@ -9,6 +9,7 @@
 	
 ### FileScanCore类
 	代码示例：
+	public void test(){
 		PropertyBuilder builder = new PropertyBuilder()
 //                .parallel(FileScanConstant.SCAN_FILE_PARALLEL_TRUE)
                 .outType(FileScanConstant.SCAN_FILE_OUTER_CONSOLE)
@@ -24,7 +25,7 @@
         });
 //        ListenerManager.register(new OuterListener());
         core.scan();
-		
+	}
 	Builder.parallel 配置并发扫描
 	Builder.basePath 扫描路径
 	ListenerManager.register 注册自定义监听器，用于处理扫描完成的结果
