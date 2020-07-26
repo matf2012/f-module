@@ -11,7 +11,7 @@
 	代码示例：
 	public void test(){
 		PropertyBuilder builder = new PropertyBuilder()
-//                .parallel(FileScanConstant.SCAN_FILE_PARALLEL_TRUE)
+                .parallel(FileScanConstant.SCAN_FILE_PARALLEL_TRUE)
                 .outType(FileScanConstant.SCAN_FILE_OUTER_CONSOLE)
                 .basePath(project.getComparePath());
         FileScanCore core = new FileScanCore(builder.build());
@@ -23,7 +23,7 @@
                 return super.afterScan(property, list);
             }
         });
-//        ListenerManager.register(new OuterListener());
+        ListenerManager.register(new OuterListener());
         core.scan();
 	}
 	Builder.parallel 配置并发扫描
